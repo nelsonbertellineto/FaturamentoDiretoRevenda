@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NBFaturamentoDiretoRevendaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ClienteComplemtentar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCliente" Type="Int32" />
+    <Property Name="WebSite" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmailNF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdCondicaoPagto" Type="Int32" />
+    <Property Name="Desconto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LimiteCredito" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ObservacaoGeral" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ObservacaoFaturamento" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DataCadastro" Type="DateTime" Precision="3" />
+    <Property Name="DataUltimaAlteracao" Type="DateTime" Precision="3" />
+    <Property Name="Ativo" Type="Boolean" />
+    <NavigationProperty Name="ClienteIdentificacao" Relationship="Self.FK_ClienteComplemtentar_ClienteIdentificacao" FromRole="ClienteComplemtentar" ToRole="ClienteIdentificacao" />
+  </EntityType>
+  <EntityType Name="ClienteContato">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCliente" Type="Int32" />
+    <Property Name="TipoContato" Type="Int32" />
+    <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cargo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DataCadastro" Type="DateTime" Precision="3" />
+    <Property Name="Ativo" Type="Boolean" />
+    <NavigationProperty Name="ClienteIdentificacao" Relationship="Self.FK_ClienteContato_ClienteIdentificacao" FromRole="ClienteContato" ToRole="ClienteIdentificacao" />
+  </EntityType>
+  <EntityType Name="ClienteEnderecamento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCliente" Type="Int32" />
+    <Property Name="TipoEndereco" Type="Int32" />
+    <Property Name="Logradouro" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Numero" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Complemento" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Bairro" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cidade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CEP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DataCadastro" Type="DateTime" Precision="3" />
+    <Property Name="Ativo" Type="Boolean" />
+    <NavigationProperty Name="ClienteIdentificacao" Relationship="Self.FK_ClienteEnderecamento_ClienteIdentificacao" FromRole="ClienteEnderecamento" ToRole="ClienteIdentificacao" />
+  </EntityType>
+  <EntityType Name="ClienteFolowUp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCliente" Type="Int32" />
+    <Property Name="Descricao" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="Pessoa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DataCadastro" Type="DateTime" Precision="3" />
+    <Property Name="Ativo" Type="Boolean" />
+    <NavigationProperty Name="ClienteIdentificacao" Relationship="Self.FK_ClienteFolowUp_ClienteIdentificacao" FromRole="ClienteFolowUp" ToRole="ClienteIdentificacao" />
+  </EntityType>
+  <EntityType Name="ClienteIdentificacao">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdRevenda" Type="Int32" />
+    <Property Name="TipoCliente" Type="Int32" />
+    <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NomeFantasia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CNPJ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InscrEstadual" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DataCadastro" Type="DateTime" Precision="3" />
+    <Property Name="Ativo" Type="Boolean" />
+    <NavigationProperty Name="ClienteComplemtentar" Relationship="Self.FK_ClienteComplemtentar_ClienteIdentificacao" FromRole="ClienteIdentificacao" ToRole="ClienteComplemtentar" />
+    <NavigationProperty Name="ClienteContato" Relationship="Self.FK_ClienteContato_ClienteIdentificacao" FromRole="ClienteIdentificacao" ToRole="ClienteContato" />
+    <NavigationProperty Name="ClienteEnderecamento" Relationship="Self.FK_ClienteEnderecamento_ClienteIdentificacao" FromRole="ClienteIdentificacao" ToRole="ClienteEnderecamento" />
+    <NavigationProperty Name="ClienteFolowUp" Relationship="Self.FK_ClienteFolowUp_ClienteIdentificacao" FromRole="ClienteIdentificacao" ToRole="ClienteFolowUp" />
+    <NavigationProperty Name="Revenda" Relationship="Self.FK_ClienteIdentificacao_Revenda" FromRole="ClienteIdentificacao" ToRole="Revenda" />
+  </EntityType>
+  <EntityType Name="Produto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdRevenda" Type="Int32" />
+    <Property Name="Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PartNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Descricao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DescricaoNF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Unidade" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PesoBruto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PesoLiquido" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="IdMarca" Type="Int32" />
+    <Property Name="IdTipoProduto" Type="Int32" />
+    <Property Name="Moeda" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PrecoCompra" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Lucratividade" Type="Int32" />
+    <Property Name="DescricaoCompleta" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="ClassificacaoFiscal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SituaçãoTributaria" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CatergoriaICMS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fornecedores" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DataCadastro" Type="DateTime" Precision="3" />
+    <Property Name="Ativo" Type="Boolean" />
+    <NavigationProperty Name="Revenda" Relationship="Self.FK_Produto_Revenda" FromRole="Produto" ToRole="Revenda" />
+  </EntityType>
+  <EntityType Name="Revenda">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NomeResponsavel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DataCadastro" Type="DateTime" Precision="3" />
+    <Property Name="QuantidadeUsuariosAcesso" Type="Int32" />
+    <Property Name="AcessoLibertado" Type="Int32" />
+    <Property Name="DataTerminoAcesso" Type="DateTime" Precision="3" />
+    <Property Name="DataUltimaAlteracao" Type="DateTime" Precision="3" />
+    <Property Name="ChaveLiberacaoAcesso" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ativo" Type="Boolean" />
+    <NavigationProperty Name="ClienteIdentificacao" Relationship="Self.FK_ClienteIdentificacao_Revenda" FromRole="Revenda" ToRole="ClienteIdentificacao" />
+    <NavigationProperty Name="Produto" Relationship="Self.FK_Produto_Revenda" FromRole="Revenda" ToRole="Produto" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Usuario_Revenda" FromRole="Revenda" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdRevenda" Type="Int32" />
+    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Senha" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TipoAcesso" Type="Int32" />
+    <Property Name="DataCadastro" Type="DateTime" Precision="3" />
+    <Property Name="Ativo" Type="Boolean" />
+    <NavigationProperty Name="Revenda" Relationship="Self.FK_Usuario_Revenda" FromRole="Usuario" ToRole="Revenda" />
+  </EntityType>
+  <Association Name="FK_ClienteComplemtentar_ClienteIdentificacao">
+    <End Role="ClienteIdentificacao" Type="Self.ClienteIdentificacao" Multiplicity="0..1" />
+    <End Role="ClienteComplemtentar" Type="Self.ClienteComplemtentar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClienteIdentificacao">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClienteComplemtentar">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClienteContato_ClienteIdentificacao">
+    <End Role="ClienteIdentificacao" Type="Self.ClienteIdentificacao" Multiplicity="0..1" />
+    <End Role="ClienteContato" Type="Self.ClienteContato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClienteIdentificacao">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClienteContato">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClienteEnderecamento_ClienteIdentificacao">
+    <End Role="ClienteIdentificacao" Type="Self.ClienteIdentificacao" Multiplicity="0..1" />
+    <End Role="ClienteEnderecamento" Type="Self.ClienteEnderecamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClienteIdentificacao">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClienteEnderecamento">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClienteFolowUp_ClienteIdentificacao">
+    <End Role="ClienteIdentificacao" Type="Self.ClienteIdentificacao" Multiplicity="0..1" />
+    <End Role="ClienteFolowUp" Type="Self.ClienteFolowUp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClienteIdentificacao">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClienteFolowUp">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClienteIdentificacao_Revenda">
+    <End Role="Revenda" Type="Self.Revenda" Multiplicity="0..1" />
+    <End Role="ClienteIdentificacao" Type="Self.ClienteIdentificacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Revenda">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClienteIdentificacao">
+        <PropertyRef Name="IdRevenda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Produto_Revenda">
+    <End Role="Revenda" Type="Self.Revenda" Multiplicity="0..1" />
+    <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Revenda">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="IdRevenda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Revenda">
+    <End Role="Revenda" Type="Self.Revenda" Multiplicity="0..1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Revenda">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdRevenda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FDRConnectionString" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ClienteComplemtentar" EntityType="Self.ClienteComplemtentar" />
+    <EntitySet Name="ClienteContato" EntityType="Self.ClienteContato" />
+    <EntitySet Name="ClienteEnderecamento" EntityType="Self.ClienteEnderecamento" />
+    <EntitySet Name="ClienteFolowUp" EntityType="Self.ClienteFolowUp" />
+    <EntitySet Name="ClienteIdentificacao" EntityType="Self.ClienteIdentificacao" />
+    <EntitySet Name="Produto" EntityType="Self.Produto" />
+    <EntitySet Name="Revenda" EntityType="Self.Revenda" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <AssociationSet Name="FK_ClienteComplemtentar_ClienteIdentificacao" Association="Self.FK_ClienteComplemtentar_ClienteIdentificacao">
+      <End Role="ClienteIdentificacao" EntitySet="ClienteIdentificacao" />
+      <End Role="ClienteComplemtentar" EntitySet="ClienteComplemtentar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClienteContato_ClienteIdentificacao" Association="Self.FK_ClienteContato_ClienteIdentificacao">
+      <End Role="ClienteIdentificacao" EntitySet="ClienteIdentificacao" />
+      <End Role="ClienteContato" EntitySet="ClienteContato" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClienteEnderecamento_ClienteIdentificacao" Association="Self.FK_ClienteEnderecamento_ClienteIdentificacao">
+      <End Role="ClienteIdentificacao" EntitySet="ClienteIdentificacao" />
+      <End Role="ClienteEnderecamento" EntitySet="ClienteEnderecamento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClienteFolowUp_ClienteIdentificacao" Association="Self.FK_ClienteFolowUp_ClienteIdentificacao">
+      <End Role="ClienteIdentificacao" EntitySet="ClienteIdentificacao" />
+      <End Role="ClienteFolowUp" EntitySet="ClienteFolowUp" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClienteIdentificacao_Revenda" Association="Self.FK_ClienteIdentificacao_Revenda">
+      <End Role="Revenda" EntitySet="Revenda" />
+      <End Role="ClienteIdentificacao" EntitySet="ClienteIdentificacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Produto_Revenda" Association="Self.FK_Produto_Revenda">
+      <End Role="Revenda" EntitySet="Revenda" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Revenda" Association="Self.FK_Usuario_Revenda">
+      <End Role="Revenda" EntitySet="Revenda" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

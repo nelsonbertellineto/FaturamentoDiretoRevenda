@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaturamentoDiretoRevenda.Web", "FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Web.csproj", "{51895E7C-99A3-4125-8CBB-6CE29FBBAD83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaturamentoDiretoRevenda.Database", "FaturamentoDiretoRevenda.Database\FaturamentoDiretoRevenda.Database.csproj", "{11F3DE54-B7B4-496B-8D66-56F31D52E24D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaturamentoDiretoRevenda.Repository", "FaturamentoDiretoRevenda.Repository\FaturamentoDiretoRevenda.Repository.csproj", "{E8D7616D-D85E-4F7E-B249-7ED56D8EE308}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaturamentoDiretoRevenda.Business", "FaturamentoDiretoRevenda.Business\FaturamentoDiretoRevenda.Business.csproj", "{E8F33E4D-7310-45C8-B63A-4BB085E25BFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaturamentoDiretoRevenda.Model", "FaturamentoDiretoRevenda.Model\FaturamentoDiretoRevenda.Model.csproj", "{5340C243-C290-4AAB-89AA-D7E56899F9A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaturamentoDiretoRevenda.Util", "FaturamentoDiretoRevenda.Util\FaturamentoDiretoRevenda.Util.csproj", "{ECBB0263-82DF-43F4-BA20-B157FB5AAC49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51895E7C-99A3-4125-8CBB-6CE29FBBAD83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51895E7C-99A3-4125-8CBB-6CE29FBBAD83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51895E7C-99A3-4125-8CBB-6CE29FBBAD83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51895E7C-99A3-4125-8CBB-6CE29FBBAD83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11F3DE54-B7B4-496B-8D66-56F31D52E24D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11F3DE54-B7B4-496B-8D66-56F31D52E24D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11F3DE54-B7B4-496B-8D66-56F31D52E24D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11F3DE54-B7B4-496B-8D66-56F31D52E24D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8D7616D-D85E-4F7E-B249-7ED56D8EE308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8D7616D-D85E-4F7E-B249-7ED56D8EE308}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8D7616D-D85E-4F7E-B249-7ED56D8EE308}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8D7616D-D85E-4F7E-B249-7ED56D8EE308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8F33E4D-7310-45C8-B63A-4BB085E25BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8F33E4D-7310-45C8-B63A-4BB085E25BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8F33E4D-7310-45C8-B63A-4BB085E25BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8F33E4D-7310-45C8-B63A-4BB085E25BFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5340C243-C290-4AAB-89AA-D7E56899F9A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5340C243-C290-4AAB-89AA-D7E56899F9A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5340C243-C290-4AAB-89AA-D7E56899F9A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5340C243-C290-4AAB-89AA-D7E56899F9A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECBB0263-82DF-43F4-BA20-B157FB5AAC49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECBB0263-82DF-43F4-BA20-B157FB5AAC49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECBB0263-82DF-43F4-BA20-B157FB5AAC49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECBB0263-82DF-43F4-BA20-B157FB5AAC49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

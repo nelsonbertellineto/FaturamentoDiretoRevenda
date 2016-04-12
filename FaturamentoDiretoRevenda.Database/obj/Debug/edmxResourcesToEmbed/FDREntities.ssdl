@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NBFaturamentoDiretoRevendaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ClienteComplemtentar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCliente" Type="int" />
+    <Property Name="WebSite" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmailNF" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdCondicaoPagto" Type="int" />
+    <Property Name="Desconto" Type="nvarchar" MaxLength="50" />
+    <Property Name="LimiteCredito" Type="nvarchar" MaxLength="50" />
+    <Property Name="ObservacaoGeral" Type="nvarchar" MaxLength="255" />
+    <Property Name="ObservacaoFaturamento" Type="nvarchar" MaxLength="255" />
+    <Property Name="DataCadastro" Type="datetime" />
+    <Property Name="DataUltimaAlteracao" Type="datetime" />
+    <Property Name="Ativo" Type="bit" />
+  </EntityType>
+  <EntityType Name="ClienteContato">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCliente" Type="int" />
+    <Property Name="TipoContato" Type="int" />
+    <Property Name="Nome" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cargo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telefone" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataCadastro" Type="datetime" />
+    <Property Name="Ativo" Type="bit" />
+  </EntityType>
+  <EntityType Name="ClienteEnderecamento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCliente" Type="int" />
+    <Property Name="TipoEndereco" Type="int" />
+    <Property Name="Logradouro" Type="nvarchar" MaxLength="50" />
+    <Property Name="Numero" Type="nvarchar" MaxLength="50" />
+    <Property Name="Complemento" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bairro" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cidade" Type="nvarchar" MaxLength="50" />
+    <Property Name="CEP" Type="nvarchar" MaxLength="50" />
+    <Property Name="UF" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataCadastro" Type="datetime" />
+    <Property Name="Ativo" Type="bit" />
+  </EntityType>
+  <EntityType Name="ClienteFolowUp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCliente" Type="int" />
+    <Property Name="Descricao" Type="nvarchar" MaxLength="1500" />
+    <Property Name="Pessoa" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataCadastro" Type="datetime" />
+    <Property Name="Ativo" Type="bit" />
+  </EntityType>
+  <EntityType Name="ClienteIdentificacao">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRevenda" Type="int" />
+    <Property Name="TipoCliente" Type="int" />
+    <Property Name="Nome" Type="nvarchar" MaxLength="50" />
+    <Property Name="NomeFantasia" Type="nvarchar" MaxLength="50" />
+    <Property Name="CNPJ" Type="nvarchar" MaxLength="50" />
+    <Property Name="InscrEstadual" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataCadastro" Type="datetime" />
+    <Property Name="Ativo" Type="bit" />
+  </EntityType>
+  <EntityType Name="Produto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRevenda" Type="int" />
+    <Property Name="Codigo" Type="nvarchar" MaxLength="50" />
+    <Property Name="PartNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Descricao" Type="nvarchar" MaxLength="50" />
+    <Property Name="DescricaoNF" Type="nvarchar" MaxLength="50" />
+    <Property Name="Unidade" Type="nchar" MaxLength="10" />
+    <Property Name="PesoBruto" Type="nvarchar" MaxLength="50" />
+    <Property Name="PesoLiquido" Type="nchar" MaxLength="10" />
+    <Property Name="IdMarca" Type="int" />
+    <Property Name="IdTipoProduto" Type="int" />
+    <Property Name="Moeda" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrecoCompra" Type="nvarchar" MaxLength="50" />
+    <Property Name="Lucratividade" Type="int" />
+    <Property Name="DescricaoCompleta" Type="nvarchar" MaxLength="1500" />
+    <Property Name="ClassificacaoFiscal" Type="nvarchar" MaxLength="50" />
+    <Property Name="SituaçãoTributaria" Type="nvarchar" MaxLength="50" />
+    <Property Name="CatergoriaICMS" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fornecedores" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataCadastro" Type="datetime" />
+    <Property Name="Ativo" Type="bit" />
+  </EntityType>
+  <EntityType Name="Revenda">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descricao" Type="nvarchar" MaxLength="50" />
+    <Property Name="NomeResponsavel" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telefone" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataCadastro" Type="datetime" />
+    <Property Name="QuantidadeUsuariosAcesso" Type="int" />
+    <Property Name="AcessoLibertado" Type="int" />
+    <Property Name="DataTerminoAcesso" Type="datetime" />
+    <Property Name="DataUltimaAlteracao" Type="datetime" />
+    <Property Name="ChaveLiberacaoAcesso" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ativo" Type="bit" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRevenda" Type="int" />
+    <Property Name="Login" Type="nvarchar" MaxLength="50" />
+    <Property Name="Senha" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nome" Type="nvarchar" MaxLength="50" />
+    <Property Name="TipoAcesso" Type="int" />
+    <Property Name="DataCadastro" Type="datetime" />
+    <Property Name="Ativo" Type="bit" />
+  </EntityType>
+  <Association Name="FK_ClienteComplemtentar_ClienteIdentificacao">
+    <End Role="ClienteIdentificacao" Type="Self.ClienteIdentificacao" Multiplicity="0..1" />
+    <End Role="ClienteComplemtentar" Type="Self.ClienteComplemtentar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClienteIdentificacao">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClienteComplemtentar">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClienteContato_ClienteIdentificacao">
+    <End Role="ClienteIdentificacao" Type="Self.ClienteIdentificacao" Multiplicity="0..1" />
+    <End Role="ClienteContato" Type="Self.ClienteContato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClienteIdentificacao">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClienteContato">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClienteEnderecamento_ClienteIdentificacao">
+    <End Role="ClienteIdentificacao" Type="Self.ClienteIdentificacao" Multiplicity="0..1" />
+    <End Role="ClienteEnderecamento" Type="Self.ClienteEnderecamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClienteIdentificacao">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClienteEnderecamento">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClienteFolowUp_ClienteIdentificacao">
+    <End Role="ClienteIdentificacao" Type="Self.ClienteIdentificacao" Multiplicity="0..1" />
+    <End Role="ClienteFolowUp" Type="Self.ClienteFolowUp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClienteIdentificacao">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClienteFolowUp">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClienteIdentificacao_Revenda">
+    <End Role="Revenda" Type="Self.Revenda" Multiplicity="0..1" />
+    <End Role="ClienteIdentificacao" Type="Self.ClienteIdentificacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Revenda">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClienteIdentificacao">
+        <PropertyRef Name="IdRevenda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Produto_Revenda">
+    <End Role="Revenda" Type="Self.Revenda" Multiplicity="0..1" />
+    <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Revenda">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="IdRevenda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Revenda">
+    <End Role="Revenda" Type="Self.Revenda" Multiplicity="0..1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Revenda">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdRevenda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NBFaturamentoDiretoRevendaModelStoreContainer">
+    <EntitySet Name="ClienteComplemtentar" EntityType="Self.ClienteComplemtentar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClienteContato" EntityType="Self.ClienteContato" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClienteEnderecamento" EntityType="Self.ClienteEnderecamento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClienteFolowUp" EntityType="Self.ClienteFolowUp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClienteIdentificacao" EntityType="Self.ClienteIdentificacao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Produto" EntityType="Self.Produto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Revenda" EntityType="Self.Revenda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ClienteComplemtentar_ClienteIdentificacao" Association="Self.FK_ClienteComplemtentar_ClienteIdentificacao">
+      <End Role="ClienteIdentificacao" EntitySet="ClienteIdentificacao" />
+      <End Role="ClienteComplemtentar" EntitySet="ClienteComplemtentar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClienteContato_ClienteIdentificacao" Association="Self.FK_ClienteContato_ClienteIdentificacao">
+      <End Role="ClienteIdentificacao" EntitySet="ClienteIdentificacao" />
+      <End Role="ClienteContato" EntitySet="ClienteContato" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClienteEnderecamento_ClienteIdentificacao" Association="Self.FK_ClienteEnderecamento_ClienteIdentificacao">
+      <End Role="ClienteIdentificacao" EntitySet="ClienteIdentificacao" />
+      <End Role="ClienteEnderecamento" EntitySet="ClienteEnderecamento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClienteFolowUp_ClienteIdentificacao" Association="Self.FK_ClienteFolowUp_ClienteIdentificacao">
+      <End Role="ClienteIdentificacao" EntitySet="ClienteIdentificacao" />
+      <End Role="ClienteFolowUp" EntitySet="ClienteFolowUp" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClienteIdentificacao_Revenda" Association="Self.FK_ClienteIdentificacao_Revenda">
+      <End Role="Revenda" EntitySet="Revenda" />
+      <End Role="ClienteIdentificacao" EntitySet="ClienteIdentificacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Produto_Revenda" Association="Self.FK_Produto_Revenda">
+      <End Role="Revenda" EntitySet="Revenda" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Revenda" Association="Self.FK_Usuario_Revenda">
+      <End Role="Revenda" EntitySet="Revenda" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

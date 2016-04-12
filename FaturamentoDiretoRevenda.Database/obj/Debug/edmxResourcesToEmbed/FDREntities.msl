@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NBFaturamentoDiretoRevendaModelStoreContainer" CdmEntityContainer="FDRConnectionString">
+    <EntitySetMapping Name="ClienteComplemtentar">
+      <EntityTypeMapping TypeName="NBFaturamentoDiretoRevendaModel.ClienteComplemtentar">
+        <MappingFragment StoreEntitySet="ClienteComplemtentar">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+          <ScalarProperty Name="EmailNF" ColumnName="EmailNF" />
+          <ScalarProperty Name="IdCondicaoPagto" ColumnName="IdCondicaoPagto" />
+          <ScalarProperty Name="Desconto" ColumnName="Desconto" />
+          <ScalarProperty Name="LimiteCredito" ColumnName="LimiteCredito" />
+          <ScalarProperty Name="ObservacaoGeral" ColumnName="ObservacaoGeral" />
+          <ScalarProperty Name="ObservacaoFaturamento" ColumnName="ObservacaoFaturamento" />
+          <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+          <ScalarProperty Name="DataUltimaAlteracao" ColumnName="DataUltimaAlteracao" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClienteContato">
+      <EntityTypeMapping TypeName="NBFaturamentoDiretoRevendaModel.ClienteContato">
+        <MappingFragment StoreEntitySet="ClienteContato">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="TipoContato" ColumnName="TipoContato" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClienteEnderecamento">
+      <EntityTypeMapping TypeName="NBFaturamentoDiretoRevendaModel.ClienteEnderecamento">
+        <MappingFragment StoreEntitySet="ClienteEnderecamento">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="TipoEndereco" ColumnName="TipoEndereco" />
+          <ScalarProperty Name="Logradouro" ColumnName="Logradouro" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Complemento" ColumnName="Complemento" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="UF" ColumnName="UF" />
+          <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClienteFolowUp">
+      <EntityTypeMapping TypeName="NBFaturamentoDiretoRevendaModel.ClienteFolowUp">
+        <MappingFragment StoreEntitySet="ClienteFolowUp">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Pessoa" ColumnName="Pessoa" />
+          <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClienteIdentificacao">
+      <EntityTypeMapping TypeName="NBFaturamentoDiretoRevendaModel.ClienteIdentificacao">
+        <MappingFragment StoreEntitySet="ClienteIdentificacao">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdRevenda" ColumnName="IdRevenda" />
+          <ScalarProperty Name="TipoCliente" ColumnName="TipoCliente" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="NomeFantasia" ColumnName="NomeFantasia" />
+          <ScalarProperty Name="CNPJ" ColumnName="CNPJ" />
+          <ScalarProperty Name="InscrEstadual" ColumnName="InscrEstadual" />
+          <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produto">
+      <EntityTypeMapping TypeName="NBFaturamentoDiretoRevendaModel.Produto">
+        <MappingFragment StoreEntitySet="Produto">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdRevenda" ColumnName="IdRevenda" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="PartNumber" ColumnName="PartNumber" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="DescricaoNF" ColumnName="DescricaoNF" />
+          <ScalarProperty Name="Unidade" ColumnName="Unidade" />
+          <ScalarProperty Name="PesoBruto" ColumnName="PesoBruto" />
+          <ScalarProperty Name="PesoLiquido" ColumnName="PesoLiquido" />
+          <ScalarProperty Name="IdMarca" ColumnName="IdMarca" />
+          <ScalarProperty Name="IdTipoProduto" ColumnName="IdTipoProduto" />
+          <ScalarProperty Name="Moeda" ColumnName="Moeda" />
+          <ScalarProperty Name="PrecoCompra" ColumnName="PrecoCompra" />
+          <ScalarProperty Name="Lucratividade" ColumnName="Lucratividade" />
+          <ScalarProperty Name="DescricaoCompleta" ColumnName="DescricaoCompleta" />
+          <ScalarProperty Name="ClassificacaoFiscal" ColumnName="ClassificacaoFiscal" />
+          <ScalarProperty Name="SituaçãoTributaria" ColumnName="SituaçãoTributaria" />
+          <ScalarProperty Name="CatergoriaICMS" ColumnName="CatergoriaICMS" />
+          <ScalarProperty Name="Fornecedores" ColumnName="Fornecedores" />
+          <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Revenda">
+      <EntityTypeMapping TypeName="NBFaturamentoDiretoRevendaModel.Revenda">
+        <MappingFragment StoreEntitySet="Revenda">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="NomeResponsavel" ColumnName="NomeResponsavel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+          <ScalarProperty Name="QuantidadeUsuariosAcesso" ColumnName="QuantidadeUsuariosAcesso" />
+          <ScalarProperty Name="AcessoLibertado" ColumnName="AcessoLibertado" />
+          <ScalarProperty Name="DataTerminoAcesso" ColumnName="DataTerminoAcesso" />
+          <ScalarProperty Name="DataUltimaAlteracao" ColumnName="DataUltimaAlteracao" />
+          <ScalarProperty Name="ChaveLiberacaoAcesso" ColumnName="ChaveLiberacaoAcesso" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="NBFaturamentoDiretoRevendaModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdRevenda" ColumnName="IdRevenda" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="TipoAcesso" ColumnName="TipoAcesso" />
+          <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,7 @@
+﻿Sequencia
+-Database
+-Model
+-Repositorio
+-Business
+- Controler 
+- view

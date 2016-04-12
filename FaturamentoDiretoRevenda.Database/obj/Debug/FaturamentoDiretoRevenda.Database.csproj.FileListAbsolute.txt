@@ -1,0 +1,10 @@
+D:\DropBox\Dropbox\Projetos\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Database\bin\Debug\FaturamentoDiretoRevenda.Database.dll.config
+D:\DropBox\Dropbox\Projetos\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Database\bin\Debug\FaturamentoDiretoRevenda.Database.dll
+D:\DropBox\Dropbox\Projetos\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Database\bin\Debug\FaturamentoDiretoRevenda.Database.pdb
+D:\DropBox\Dropbox\Projetos\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Database\bin\Debug\EntityFramework.dll
+D:\DropBox\Dropbox\Projetos\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Database\bin\Debug\EntityFramework.SqlServer.dll
+D:\DropBox\Dropbox\Projetos\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Database\bin\Debug\EntityFramework.xml
+D:\DropBox\Dropbox\Projetos\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Database\bin\Debug\EntityFramework.SqlServer.xml
+D:\DropBox\Dropbox\Projetos\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Database\obj\Debug\FaturamentoDiretoRevenda.Database.csprojResolveAssemblyReference.cache
+D:\DropBox\Dropbox\Projetos\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Database\obj\Debug\FaturamentoDiretoRevenda.Database.dll
+D:\DropBox\Dropbox\Projetos\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Database\obj\Debug\FaturamentoDiretoRevenda.Database.pdb

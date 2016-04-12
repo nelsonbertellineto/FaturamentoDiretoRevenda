@@ -1,0 +1,4 @@
+D:\DropBox\Dropbox\Projetos\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Model\bin\Debug\FaturamentoDiretoRevenda.Model.dll
+D:\DropBox\Dropbox\Projetos\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Model\bin\Debug\FaturamentoDiretoRevenda.Model.pdb
+D:\DropBox\Dropbox\Projetos\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Model\obj\Debug\FaturamentoDiretoRevenda.Model.dll
+D:\DropBox\Dropbox\Projetos\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Model\obj\Debug\FaturamentoDiretoRevenda.Model.pdb

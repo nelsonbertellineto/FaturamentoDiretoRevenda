@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="90d1303a8be642d4a515bb2763e15b02" Name="Diagram1">
+        <EntityTypeShape EntityType="NBFaturamentoDiretoRevendaModel.ClienteComplemtentar" Width="1.5" PointX="5.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="NBFaturamentoDiretoRevendaModel.ClienteContato" Width="1.5" PointX="5.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NBFaturamentoDiretoRevendaModel.ClienteEnderecamento" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="NBFaturamentoDiretoRevendaModel.ClienteFolowUp" Width="1.5" PointX="5.25" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NBFaturamentoDiretoRevendaModel.ClienteIdentificacao" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NBFaturamentoDiretoRevendaModel.Produto" Width="1.5" PointX="3" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NBFaturamentoDiretoRevendaModel.Revenda" Width="1.5" PointX="0.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NBFaturamentoDiretoRevendaModel.Usuario" Width="1.5" PointX="3" PointY="23.375" IsExpanded="true" />
+        <AssociationConnector Association="NBFaturamentoDiretoRevendaModel.FK_ClienteComplemtentar_ClienteIdentificacao" ManuallyRouted="false" />
+        <AssociationConnector Association="NBFaturamentoDiretoRevendaModel.FK_ClienteContato_ClienteIdentificacao" ManuallyRouted="false" />
+        <AssociationConnector Association="NBFaturamentoDiretoRevendaModel.FK_ClienteEnderecamento_ClienteIdentificacao" ManuallyRouted="false" />
+        <AssociationConnector Association="NBFaturamentoDiretoRevendaModel.FK_ClienteFolowUp_ClienteIdentificacao" ManuallyRouted="false" />
+        <AssociationConnector Association="NBFaturamentoDiretoRevendaModel.FK_ClienteIdentificacao_Revenda" ManuallyRouted="false" />
+        <AssociationConnector Association="NBFaturamentoDiretoRevendaModel.FK_Produto_Revenda" ManuallyRouted="false" />
+        <AssociationConnector Association="NBFaturamentoDiretoRevendaModel.FK_Usuario_Revenda" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
