@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace FaturamentoDiretoRevenda.Model
 {
@@ -10,6 +11,10 @@ namespace FaturamentoDiretoRevenda.Model
     {
         public int Id { get; set; }
         public Nullable<int> IdRevenda { get; set; }
+
+        [Display(Name = "Login: ")]
+        [Required(ErrorMessage = "Ops, Informe o Login!")]
+
         public string Login { get; set; }
         public string Senha { get; set; }
         public string Nome { get; set; }

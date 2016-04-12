@@ -14,7 +14,7 @@ namespace FaturamentoDiretoRevenda.Repository
             using (db = new FDRConnectionString())
             {
                 var objRep = new ClienteIdentificacao
-                {                   
+                {
                     Id = obj.Id,
                     IdRevenda = obj.IdRevenda,
                     TipoCliente = obj.TipoCliente,
@@ -23,7 +23,10 @@ namespace FaturamentoDiretoRevenda.Repository
                     CNPJ = obj.CNPJ,
                     InscrEstadual = obj.InscrEstadual,
                     DataCadastro = DateTime.Now,
-                    Ativo = true
+                    Ativo = true,
+                    ClienteEnderecamento = obj.ClienteEnderecamento.Select(ce => new ClienteEnderecamento {
+                        Bairro = ce.Bairro
+                    }).ToList()                    
                 };
                 db.ClienteIdentificacao.Add(objRep);
                 return db.SaveChanges() > 0;

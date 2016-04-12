@@ -19,8 +19,10 @@ namespace FaturamentoDiretoClienteIdentificacao.Controllers
             return View(obj);
         }
         public ActionResult Create()
-        {            
-            return View();
+        {
+            var obj = new ClienteIdentificacaoMod();
+            obj.ClienteEnderecamento.Add(new ClienteEnderecamentoMod());
+            return View(obj);
         }
         [HttpPost]
         public ActionResult Create(ClienteIdentificacaoMod obj)

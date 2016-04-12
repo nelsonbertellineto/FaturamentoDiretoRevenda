@@ -12,3 +12,17 @@ D:\DropBox\Dropbox\Projetos\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda\Fa
 D:\DropBox\Dropbox\Projetos\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Repository\bin\Debug\FaturamentoDiretoRevenda.Repository.dll.config
 D:\DropBox\Dropbox\Projetos\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Repository\bin\Debug\EntityFramework.SqlServer.dll
 D:\DropBox\Dropbox\Projetos\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Repository\bin\Debug\FaturamentoDiretoRevenda.Repository.dll.config
+D:\GitHub\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Repository\bin\Debug\FaturamentoDiretoRevenda.Repository.dll
+D:\GitHub\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Repository\bin\Debug\FaturamentoDiretoRevenda.Repository.pdb
+D:\GitHub\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Repository\bin\Debug\EntityFramework.dll
+D:\GitHub\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Repository\bin\Debug\FaturamentoDiretoRevenda.Database.dll
+D:\GitHub\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Repository\bin\Debug\FaturamentoDiretoRevenda.Model.dll
+D:\GitHub\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Repository\bin\Debug\FaturamentoDiretoRevenda.Database.pdb
+D:\GitHub\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Repository\bin\Debug\FaturamentoDiretoRevenda.Model.pdb
+D:\GitHub\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Repository\bin\Debug\EntityFramework.xml
+D:\GitHub\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Repository\obj\Debug\FaturamentoDiretoRevenda.Repository.csprojResolveAssemblyReference.cache
+D:\GitHub\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Repository\obj\Debug\FaturamentoDiretoRevenda.Repository.dll
+D:\GitHub\FaturamentoDiretoRevenda\FaturamentoDiretoRevenda.Repository\obj\Debug\FaturamentoDiretoRevenda.Repository.pdb
