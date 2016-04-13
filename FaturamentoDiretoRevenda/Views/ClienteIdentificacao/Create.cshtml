@@ -90,7 +90,7 @@
                 </div>
                 <div id="enderecamento" class="tab-pane fade">
                     <h3>Dados Endereçamento</h3>
-                     <div class="form-group">
+                    <div class="form-group">
                         @Html.LabelFor(model => model.ClienteEnderecamento, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
                             @Html.EditorFor(model => model.ClienteEnderecamento, new { htmlAttributes = new { @class = "form-control" } })
@@ -113,6 +113,6 @@
 
 }
 
-            <div>
-                @Html.ActionLink("Voltar", "Index")
-            </div>
+<div>
+    @Html.ActionLink("Voltar", "Index")
+</div>
